@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+
+
+<div id="app">
+    
+    <table>
+        <tr>
+            <ul>
+                <li v-for="post in posts" :key="post.id">
+                    {{post.title}}
+                </li>
+        
+            </ul>
+
+        </tr>
+    </table>
+  
+
+
+
+
+</div>
+
+<script>
+
+
+    let vm = new Vue({
+
+        el:'#app',
+
+        data:{
+            posts: [
+                {
+                    id:1 ,
+                    title:'Post 1',
+                    body: 'dsfdsfsdfds'
+                },
+
+                {
+                    id:2 ,
+                    title:'Post 2',
+                    body: 'dsfdsfsdfds'
+                },
+
+                {
+                    id:3 ,
+                    title:'Post 3',
+                    body: 'dsfdsfsdfds'
+                },
+
+                {
+                    id:4 ,
+                    title:'Post 4',
+                    body: 'dsfdsfsdfds'
+                }
+
+            ]
+           
+        }
+
+    })
+
+</script>
+
+
+
+
+
+</html>

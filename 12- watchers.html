@@ -12,14 +12,9 @@
 
 
 <div id="app">
-    
-<button v-on:click="increaseFont">Increase</button>
+    <h1>Edwin Diaz {{isActive === 'active' ? 'is Active' : 'not Active'}}</h1>
 
-<button v-on:click="decreaseFont">Decrease</button>
-
-    <div v-bind:style="{color: 'red', fontSize: fontSize + 'px'}">{{message}}</div>
-
-
+   
 </div>
 
 <script>
@@ -30,23 +25,13 @@
         el:'#app',
 
         data:{
-            message:'hello',
-            fontSize: 12
-          
+            isActive: 'not active'
         },
 
-        methods:{
-
-            increaseFont(){
-                this.fontSize+=10;
-
-            },
-
-            decreaseFont(){
-                this.fontSize-=10;
-
+        watched:{
+            isActive: function(){
+                
             }
-
         }
 
     })

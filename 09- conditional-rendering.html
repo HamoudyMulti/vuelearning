@@ -12,12 +12,11 @@
 
 
 <div id="app">
-    
-<button v-on:click="increaseFont">Increase</button>
+    <h1 v-if="isActive">{{name}}</h1>
 
-<button v-on:click="decreaseFont">Decrease</button>
+    <h1 v-else-if="name == 'Edwin Diaz'">Hey Edwin Sup</h1>
 
-    <div v-bind:style="{color: 'red', fontSize: fontSize + 'px'}">{{message}}</div>
+    <h1 v-else>NO USER NAMED {{name}}</h1>
 
 
 </div>
@@ -30,23 +29,9 @@
         el:'#app',
 
         data:{
-            message:'hello',
-            fontSize: 12
-          
-        },
-
-        methods:{
-
-            increaseFont(){
-                this.fontSize+=10;
-
-            },
-
-            decreaseFont(){
-                this.fontSize-=10;
-
-            }
-
+            isActive: false,
+            name:'Edwin Diaz'
+           
         }
 
     })
